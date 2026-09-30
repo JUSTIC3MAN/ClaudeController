@@ -1,0 +1,18 @@
+# Store text with LF, check it out however the platform wants it.
+* text=auto
+
+# Files Windows tools are happier reading with CRLF.
+*.bat      text eol=crlf
+*.rc       text eol=crlf
+*.manifest text eol=crlf
+
+# Files that must stay LF.
+*.mk text eol=lf
+
+# Never line-ending-convert these.
+*.exe binary
+*.ico binary
+*.png binary
+
+# Vendored dependency: keep it out of the language stats and out of diffs.
+third_party/** linguist-vendored

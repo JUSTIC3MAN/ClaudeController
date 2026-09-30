@@ -1,0 +1,25 @@
+# ClaudeController.exe in the root IS tracked on purpose — it is what people download.
+# Everything below is either build scratch or local state.
+
+# Build output. Both build scripts write here.
+build/
+
+# Compiler leftovers, in case anything is ever built in place.
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exp
+*.res
+
+# Written by the app next to the exe while you use it.
+*.profile
+imgui.ini
+
+# Local notes and scratch, not part of the program.
+PUBLISH.md
+Claude outputs/
+
+# Windows / OneDrive litter.
+Thumbs.db
+desktop.ini
