@@ -530,8 +530,9 @@ std::vector<std::shared_ptr<Device>> enumerate_devices(){
 
             auto d = std::make_shared<PadDevice>();
             if (!d->open_probe(det->DevicePath)){
-                if (d->h != INVALID_HANDLE_VALUE) CloseHandle(d->h);
-                if (d->parse.pp) HidD_FreePreparsedData(d->parse.pp);
+                // ~PadDevice() closes h and frees parse.pp. Doing it here as well
+                // was a double free: every non-gamepad HID interface corrupted the
+                // heap on the way past, and the next allocation took the process down.
                 continue;
             }
             HIDD_ATTRIBUTES at = {}; at.Size = sizeof at;
