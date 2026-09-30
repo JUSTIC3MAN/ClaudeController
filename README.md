@@ -7,13 +7,13 @@ little delay between the button and the sound as the hardware allows.
 
 ## Download
 
-**[Download ClaudeController.exe](../../releases/latest/download/ClaudeController.exe)** — one
+**[Download ClaudeController.exe](ClaudeController.exe)** — one
 file, about 1.8 MB. Put it anywhere you like and double-click it. No installer, no runtime, no
 DLLs beside it. It writes its profile next to itself and leaves the rest of the machine alone.
 
 Built for 64-bit Windows 10 and 11. The first time you run it, Windows will probably say
 *Windows protected your PC*, because the file is not code-signed: click *More info*, then
-*Run anyway*. Older versions are on the [releases page](../../releases).
+*Run anyway*. Older versions are on the [releases page](https://github.com/JUSTIC3MAN/ClaudeController/releases).
 
 To send notes into a DAW you also need loopMIDI — see [MIDI into Ableton](#midi-into-ableton).
 
